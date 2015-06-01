@@ -1,0 +1,39 @@
+**** Need to register
+
+
+***** API Functions
+server url - yardguide.net
+
+test server url -  http://192.168.0.187/yardguide/
+- Get Category 
+?json=get_category_index&parent=0&post_type=event
+
+- Get Posts(Business) of Category
+?json=get_category_posts&id=1&post_type=event         pararm- Category id
+
+  
+- Get Content(Business info)
+?json=get_post&id=376					param- post id
+
+- Give Star rating
+?json=set_star_rating&id=376&star_rating=3.5    param- post id, star_rating        return:new star_rating
+
+- Search business
+?json=get_search_results&search=test&post_type=event			param - search data
+
+- Filter business
+param: 		title, category_ids, event_date, location_state, location_lat, location_lng, cost_entry, rating
+* ex: 		url/?json=get_filter_results&post_type=event&title=kokoda 
+ 
+- get posts from array (for selected )
+?json=get_array_posts&post_ids=380,376       param - post ids string(with ,)
+
+- add event
+?json=add_post&dev=1&status=pending&post_type=portfolio&categories=1&title=test01&custom[website_link]=a&custom[map_position][lat]=43&custom[map_position][lng]=120&custom[description]=a&attachment=imgArray
+
+&custom[start_date]=a&custom[end_date]=1&custom[times]=a&custom[cost_of_entry]=a
+
+- add attraction
+?json=add_post&dev=1&status=pending&post_type=post&categories=1&title=test01&custom[website_link]=a&custom[map_position][lat]=43&custom[map_position][lng]=120&custom[description]=a&attachment=imgArray
+
+&custom[phone_number]=a&custom[email_address]=1&custom[monday_time]=a&custom[tuesday_time]=a&custom[wednesday_time]=a&custom[thursday_time]=a&custom[friday_time]=a&custom[saturday_time]=a&custom[sunday_time]=a  
